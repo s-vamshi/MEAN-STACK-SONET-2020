@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        #submitinput{
+            color: white;
+            background-color:rgb(243,124,6);
+            border:1px solid white;
+            border-radius: 5px;
+            padding: 10px;
+            font-size:19px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body style="background-color: #ccff66;">
+    <center>
+        <form>
+            <h1 style="color: red;">Personal Details</h1>
+            <b>Name:</b><input type="text" name="nameOfStudent" >
+            <br>
+            <br>
+            <b>Password:</b><input type="password" name="passcode" >
+            <br>
+            <br>
+            <b>E-Mail id:</b><input type="email" name="mail" >
+            <br>
+            <br>
+            <b>Gender:</b><input type="radio" name="gender" > Male<input type="radio" name="gender" > Female
+            <br>
+            <br>
+            <b>Contact:</b><input type="number" name="mobileNo" >
+            <h2 style="color:red">Educational Qualification</h2>
+
+            <b>Degree:</b>
+            <select name="degree">
+                <option value="none">--Select Group--</option>
+                <option value="bsc">B.sc</option>
+                <option value="ba">BA</option>
+            </select>
+            <br>
+            <br>
+            <b>Engineering:</b>
+            <select name="engineering">
+                <option value="none">--Select Group--</option>
+                <option value="cs">CSE</option>
+                <option value="it">IT</option>
+            </select>
+            <br>            
+            <br>
+            <b>Hobbies:</b> <input type="checkbox" name="hobbies">Playing Chess <input type="checkbox" name="" id="">Reading Books
+            <h2 style="color:red">Address</h2>
+            <textarea name="address" id="#" cols="50" rows="7"></textarea>
+            <br>
+            <br>
+            <b>Attach Resume:</b><input type="file" name="Resume" id="#">
+            <br>
+            <br>
+            <input id="submitinput" type="submit" >
+        </form>
+    </center>
+</body>
+</html>
