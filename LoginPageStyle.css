@@ -1,0 +1,75 @@
+@keyframes login{
+    0% {left: -400px;top: 0px;}
+    100% {left: 0px;top: 0px;}
+}
+
+@keyframes login1{
+    0% {left: 400px;top: 0px;}
+    100% {left: 0px;top: 0px;}
+}
+
+@keyframes fade{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+        left: 0px;
+    }
+    to{
+        transform: rotate(90deg);
+        left: 0px;
+    }
+}
+
+b{
+    animation: fade 2s;
+}
+
+h3{
+    color: rgb(129,131,130);
+    font-style: oblique;
+}
+
+#lefttoright{
+    height:30px;
+    border: 1px solid rgb(170,172,171);
+    border-radius: 4px;
+    position: relative;
+    animation-name: login;
+    animation-duration: 1s;
+}
+
+#righttoleft{
+    height:30px;
+    border: 1px solid rgb(170,172,171);
+    border-radius: 4px;
+    position: relative;
+    animation-name: login1;
+    animation-duration: 1s;
+}
+
+#main{
+    border: 2px double #4d4f4e;
+    border-radius: 4px;
+    margin: 100px 50px 100px 50px;
+    width: 400px;
+    height: 300px;
+    background-color: #eceeed;
+}
+#fsubmit{
+    width: 300px;
+    height:30px;
+    color: white;
+    font-size: large;
+    border: 2px outset;
+    background-color: #ea4235;
+}
+
+#forgotpass{
+    float: right;
+    margin-right: 15px;
+    color: rgb(170,172,171);
+}
