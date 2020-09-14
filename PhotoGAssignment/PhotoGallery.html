@@ -4,20 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <style>
-        body{
-            background-image: url(https://i1.wp.com/bestcasereviews.com/wp-content/uploads/2020/01/rsz_2019_collage_poster.jpg?fit=1200%2C1200&ssl=1);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 </head>
-<body>
+<body  style="background-color:#f6416c;">
+        <!--    
+            Use any of the .bg-color classes to add a background color to the navbar.
+            Tip: Add a white text color to all links in the navbar with the .navbar-dark class, or use the .navbar-light class to add a black text color.
+        -->
+        <nav class="navbar sticky-top navbar-expand-sm  bg-dark navbar-dark">
+            <a class="navbar-brand" href="./PhotoGallery.html"><img class="img-fluid" src="./coupon-1828620_1280.png" width="75px" alt="movies"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#coll">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="coll">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="./PhotoGallery.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./ListofMovies.html">MORE MOVIES</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav  ml-auto">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            LOGIN
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+          
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">LOGIN</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body d-flex justify-content-center">
+                  <form action="" method="post">
+                    <input type="text" name="user" placeholder="USERNAME">
+                    <br>
+                    <br>
+                    <input type="password" name="pass" placeholder="PASSWORD">
+                    <br>
+                    <br>
+                  </form>
+                </div>
+          
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success" >SUBMIT</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
     <div class="container">
-        <div class="text-center mt-5 mb-5" style="color: black(0, 255, 255); background-color:rgb(153, 0, 255); font-family:Verdana, Geneva, Tahoma, sans-serif;">
+        <div class="text-center mt-5 mb-5" style="color: black(0, 255, 255); font-family:Verdana, Geneva, Tahoma, sans-serif;">
             <h4>MOST UNDERRATED MOVIES AND FACTS</h4>  
         </div>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner" style="height: 50%;">
+              <div class="carousel-item active">
+                <img class="img-fluid mx-auto d-block" src="https://images1.houstonpress.com/imager/u/745xauto/10810730/hou_art_20180831_2001_header.jpg"  width="500">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid  mx-auto d-block" src="https://sobrosnetwork.com/wp-content/uploads/2019/07/aaaabatguspl6tvbvgdylluynlird63c5nzhiqg8nq158km7juuf3zo1adi1xdrrkri-grwj0tfj8g_it2rfxmnm5erif0jaf_b7fa.jpg"   width="500">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid mx-auto d-block" src="https://c4.wallpaperflare.com/wallpaper/507/704/23/2017-4k-fionn-whitehead-dunkirk-wallpaper-preview.jpg"  width="500" >
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
         <div class="row mt-2 mb-2">
             <div class="col-sm">
                 <a href="./inc.html"><img class="img-thumbnail" src="https://i.pinimg.com/originals/ba/8a/44/ba8a447ca195acdb489e512af234c089.jpg" alt="Nolan"></a>
