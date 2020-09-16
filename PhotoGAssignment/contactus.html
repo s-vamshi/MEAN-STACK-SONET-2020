@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script>
+        function fsubmit(){
+            var fvalues=document.getElementById("f").elements;
+            for(var i=0;i<fvalues.length;i++){
+                console.log(fvalues[i].id + " : " + fvalues[i].value);
+            }
+            document.getElementsByClassName("container")[0].style.visibility = "hidden";
+            document.getElementsByTagName("h3")[0].style.visibility = "visible";
+        }
+    </script>
 </head>
-<body style="background-color:#f6416c;">
+<body  style="background-color:#f6416c;">
     <!--    
         Use any of the .bg-color classes to add a background color to the navbar.
         Tip: Add a white text color to all links in the navbar with the .navbar-dark class, or use the .navbar-light class to add a black text color.
@@ -21,9 +37,9 @@
                 <li class="nav-item">
                 <a class="nav-link" href="./PhotoGallery.html">HOME</a>
                 </li>
-                <li class="nav-item active">
-                <a class="nav-link" href="./ListofMovies.html">MORE MOVIES</a>
                 <li class="nav-item">
+                <a class="nav-link" href="./ListofMovies.html">MORE MOVIES</a>
+                <li class="nav-item active">
                     <a class="nav-link" href="./contactus.html">CONTACT US</a>
                 </li>
 
@@ -69,49 +85,17 @@
           </div>
         </div>
       </div>
+      <h3 style="visibility: hidden;">YOUR RESPONSE HAS BEEN RECORDED!!!</h3>
     <div class="container">
-        <div class="text-center mt-5 mb-5" style="color: black(0, 255, 255);font-family:Verdana, Geneva, Tahoma, sans-serif;">
-            <h4>MOST UNDERRATED MOVIES</h4>  
-        </div>
-        <div class="row mt-2 mb-2">
-            <div class="col-sm">
-                <img class="img-thumbnail" src="https://coltchronicle.org/wp-content/uploads/2020/06/1AGuIdqTVnRfTYLcEsByBFQ.jpeg">
-            </div>
-            <div class="col-sm">
-                <img class="img-thumbnail" src="https://lemonwire.com/wp-content/uploads/2019/04/benjamin-button.jpg" alt="Nolan">
-            </div>
-            <div class="col-sm">
-                <img class=" img-thumbnail" src="https://images.indianexpress.com/2019/08/the-dark-knight-1200.jpg">
-            </div>
-        </div>
-        <div class="row mt-2 mb-2">
-
-            <div class="col-sm">
-                <img class=" img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRW6oK8R1JGqDivYBXgh1b066SzIIGnC-3OOQ&usqp=CAU"  alt="Nolan">
-            </div>
-            <div class="col-sm">
-                <img class=" img-thumbnail" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201903/Super_Deluxe.jpeg?leXpRVXttfD1CDmCoD1t187JS1O4P018"  alt="Nolan">
-            </div>
-            <div class="col-sm">
-                <img class=" img-thumbnail" src="https://boxofficecollection.in/wp-content/uploads/2016/05/24-the-movie-collection.jpg"  alt="Nolan">
-            </div>
-
-        </div>
-        <div class="row mt-2 mb-2">
-            <div class="col-sm">
-                <img class="img-thumbnail" src="https://kernelketchup.files.wordpress.com/2016/08/the-imitation-game-2014-poster-hd-kernel-ketchup.jpg?w=640" alt="Nolan">
-            </div>
-
-            <div class="col-sm">
-                <img class=" img-thumbnail" src="https://qph.fs.quoracdn.net/main-qimg-fe4214172d399f1fb439f4407a54e5d4.webp">
-            </div>
-            <div class="col-sm">
-                <img class=" img-thumbnail" src="https://lh5.googleusercontent.com/-jN07w8nOmnY/VQoH3XKVvuI/AAAAAAAAG_g/xeeGkjzrfXo/s900/Predestination-movir-poster_900_675.jpg"  alt="Nolan">
-            </div>
-
-        </div>
-
-
+        <form class="form-group" method="POST" id="f" onsubmit="return false;">
+            <label for="fname">NAME : </label>
+            <input class="form-control" type="text" id="NAME" required>
+            <label for="mail">EMAIL : </label>
+            <input class="form-control" type="email" id="EMAIL" required>
+            <label for="MESSAGE">MESSAGE : </label>
+            <textarea class="form-control" id="MESSAGE" rows="10" required></textarea>
+        </form>
+        <button class="btn btn-success" type="submit" onclick="fsubmit();">SUBMIT</button>
     </div>
 </body>
 </html>
