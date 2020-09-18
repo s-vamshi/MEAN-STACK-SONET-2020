@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        var students = [ {name:"A",rollno:"19BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"B",rollno:"20BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"C",rollno:"21BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"D",rollno:"22BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"E",rollno:"23BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"F",rollno:"24BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"G",rollno:"25BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"H",rollno:"26BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"I",rollno:"27BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"},
+            {name:"J",rollno:"28BD1A055M",mobileNo:9876543210,email:"sonet@gmail.com"}
+         ];
+        var names = Object.keys(students[0]);
+        document.write("<table border = '1' >");
+            document.write("<tr>");
+                document.write("<th>");
+                    document.write(names[0]);
+                document.write("</th>");
+                document.write("<th>");
+                    document.write(names[1]);
+                document.write("</th>");
+                document.write("<th>");
+                    document.write(names[2]);
+                document.write("</th>");
+                document.write("<th>");
+                    document.write(names[3]);
+                document.write("</th>");
+            document.write("</tr>");
+            
+            for (const i of students) {
+                document.write("<tr>");
+                for (const key in i) {
+                    const element = i[key];
+                    document.write("<td>");
+                        document.write(element);
+                    document.write("</td>");
+
+                }
+                document.write("</tr>");
+            }
+        document.write("</table>");
+        var val = 0;
+        function myfun(){
+            val+= 1;
+            var ele = document.getElementById("f").elements;
+                var c = {};
+                for (const i of ele) {
+                    var a = i.id;
+                    var b = i.value;
+                    c[a] = b;
+                }
+                let head = Object.keys(c);
+                let data = Object.values(c);
+                var table = document.getElementsByTagName("table")[1];
+            if(val==1){
+                    var tr = document.createElement("tr");
+                    var th = document.createElement("th");
+                    var node = document.createTextNode("S.NO");
+                    th.appendChild(node);
+                    tr.appendChild(th);
+                   
+                    table.appendChild(tr);
+
+                    for (const key of head) {
+                        var th1 = document.createElement("th");
+                        var node1 = document.createTextNode(key);
+                        th1.appendChild(node1);
+                        tr.appendChild(th1);
+                    }
+            }
+            
+                var tr1 = document.createElement("tr");
+                var td = document.createElement("td");
+                var node2 = document.createTextNode(val + ".");
+                td.appendChild(node2);
+                tr1.appendChild(td); 
+                for (const i of data) {
+                    var td1 = document.createElement("td");
+                    var node3 = document.createTextNode(i);
+                    td1.appendChild(node3);
+                    tr1.appendChild(td1);
+                }
+                table.appendChild(tr1);
+        }
+
+
+    </script>
+</head>
+<body>
+    <br>
+        <form class="form-group" id="f" method="POST" onsubmit="return false;">
+            NAME : <input class="form-control" type="text" id="Name">
+            <br>
+            <br>
+            BRANCH : <input class="form-control" type="text" id="Branch">
+            <br>
+            <br>
+            EMAIL : <input class="form-control" type="email" id="Email">
+            <br>
+            <br>
+        </form>
+        <input class="form-control" type="submit" onclick="myfun()">
+        <br>
+        <br>
+        <br><br>
+        <table border="1">
+
+        </table>
+
+</body>
+</html>
